@@ -1,0 +1,39 @@
+file used =  "Netflix.csv"
+
+
+*Try To Work using Functions (it improves Programming Logic)*
+
+
+handle missing values from type column (replace them with 'Unknown')
+make a frequency table
+
+
+
+Remove "**" form title column
+
+
+
+change "/" to "-" in the date column
+e.g: 9/25/2021 = "9-25-2021
+
+
+
+remove bad characters from release_year column
+hint : bad_char = ["(" , ")" , "c" , "C" , "." , " " , "S" , "s"]
+
+
+
+remove ",?" from rating column
+also replace mid hyphen with underscore
+
+
+
+Bonus Question :
+
+split the last column with ","
+and only keep the first category
+
+e.g :
+
+[TV Dramas,  TV Horror,  TV Mysteries]
+only keep TV Dramas
