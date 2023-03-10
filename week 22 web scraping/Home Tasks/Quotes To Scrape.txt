@@ -1,0 +1,45 @@
+import requests
+from bs4 import BeautifulSoup
+
+
+base_site = "https://quotes.toscrape.com/"
+
+response = requests.get(base_site)
+html = response.content
+soup = BeautifulSoup(html , 'html.parser')
+
+sayings_and_authors = []
+
+quotes = soup.find_all(class_ = "quote")
+
+for quote in quotes:
+    
+    saying = quote.find(class_ = "text")
+    saying = saying.text
+    
+    author = quote.find(class_ = "author")
+    author = author.text
+
+    sayings_and_authors.append([saying , author])
+    
+
+sayings_and_authors
+
+
+
+
+
+
+# Scrapping Paginated Pages
+
+Selecting the best UX pattern for your site 
+
+To display a subset of a larger list, you can choose between different UX patterns:
+
+**Pagination: Where a user can use links such as "next", "previous", and page numbers to navigate between pages that display one page of results at a time.**
+
+Load more: Buttons that a user can click to extend an initial set of displayed results.
+
+Infinite scroll: Where a user can scroll to the end of the page to cause more content to be loaded. (Learn more about infinite scroll search-friendly recommendations.)
+
+Aza Raskin is known for The Social Dilemma (2020), No pot ser! (2019) and Follow This (2018).
